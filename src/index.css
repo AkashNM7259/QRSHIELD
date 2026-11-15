@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  background-color: #050505;
+  color: #E5E5E5;
+  font-family: 'Space Grotesk', 'Inter', -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Obsidian Precision Grid */
+.cyber-grid {
+  background-size: 44px 44px;
+  background-image: 
+    linear-gradient(to right, rgba(192, 192, 192, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(192, 192, 192, 0.04) 1px, transparent 1px);
+}
+
+.cyber-grid-dense {
+  background-size: 22px 22px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 0, 51, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 0, 51, 0.05) 1px, transparent 1px);
+}
+
+/* Ultra-Premium Glassmorphism Panels */
+.glass-panel {
+  background: rgba(10, 10, 10, 0.78);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(192, 192, 192, 0.16);
+  border-radius: 1rem;
+}
+
+.glass-panel-glow {
+  background: rgba(12, 12, 12, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid rgba(255, 0, 51, 0.45);
+  box-shadow: 0 0 30px -5px rgba(255, 0, 51, 0.25);
+}
+
+.glass-card {
+  background: rgba(14, 14, 14, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(192, 192, 192, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(255, 0, 51, 0.5);
+  box-shadow: 0 10px 30px -5px rgba(255, 0, 51, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Chrome Metallic Gradient Utilities */
+.text-metallic-chrome {
+  background: linear-gradient(135deg, #FFFFFF 0%, #D4D4D4 35%, #8A8A8A 70%, #E5E5E5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-metallic-chrome {
+  border-image: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(192, 192, 192, 0.1), rgba(255, 0, 51, 0.3)) 1;
+}
+
+/* Laser Crimson Glow Accents */
+.text-glow-laser {
+  text-shadow: 0 0 12px rgba(255, 0, 51, 0.7), 0 0 25px rgba(255, 0, 51, 0.4);
+}
+
+.text-glow-chrome {
+  text-shadow: 0 0 10px rgba(192, 192, 192, 0.5);
+}
+
+/* Custom Obsidian Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+  border: 1px solid rgba(192, 192, 192, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FF0033;
+}
+
+/* Laser Crimson Scanning Line Animation */
+@keyframes laserScanAnim {
+  0% {
+    top: 6%;
+    opacity: 0.9;
+  }
+  50% {
+    top: 92%;
+    opacity: 1;
+  }
+  100% {
+    top: 6%;
+    opacity: 0.9;
+  }
+}
+
+.scanning-laser {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent 0%, #FF0033 50%, transparent 100%);
+  box-shadow: 0 0 18px #FF0033, 0 0 35px #FF0033;
+  animation: laserScanAnim 2.4s ease-in-out infinite;
+}
