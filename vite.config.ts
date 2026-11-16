@@ -8,6 +8,9 @@ export default defineConfig({
     port: 3000,
     host: true,
   },
+  preview: {
+    allowedHosts: ['.up.railway.app', '.railway.app'],
+  },
   build: {
     chunkSizeWarningLimit: 1000,
     rollupOptions: {
